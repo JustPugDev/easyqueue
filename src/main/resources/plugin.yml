@@ -1,0 +1,52 @@
+name: ${project.name}
+version: ${project.version}
+description: Queues player when the server is full
+author: KeilaPallo
+main: keilapallo.plugin.EasyQueue.EasyQueuePlugin
+commands:
+  easyversion:
+    description: Displays version of SimpleQueue Plugin
+    permission: easyqueue.easyversion
+    usage: /easyversion
+  easyqueue:
+    description: Lists current players in queue
+    permission: easyqueue.easyqueue
+    usage: /easyqueue
+  easylist:
+    description: Lists all players in the prioritizedPlayers.yml file
+    permission: easyqueue.easylist
+    usage: /easylist
+  easyadd:
+    description: Adds a player to the prioritizedPlayers.yml file
+    permission: easyqueue.easyadd
+    usage: /easyadd [player]
+  easyremove:
+    description: Removes a player from the prioritizedPlayers.yml file
+    permission: easyqueue.easyremove
+    usage: /easyremove [player]
+
+permissions:
+  easyqueue.*:
+    description: Grants access to all SimpleQueue commands and enables the player to connect to the server even if the slot limit is reached
+    children:
+      easyqueue.ignoreslotlimit: true
+      easyqueue.prioritized: true
+      easyqueue.easyversion: true
+      easyqueue.easyqueue: true
+      easyqueue.easylist: true
+      easyqueue.easyadd: true
+      easyqueue.easyremove: true
+  easyqueue.ignoreslotlimit:
+    description: Allows the user to connect to the server even if the slot limit is reached
+  easyqueue.prioritized:
+    description: Puts the user in front of normal users in the queue and uses reserved slots
+  easyqueue.easyversion:
+    description: Grants access to the /easyversion command - Displays version of SimpleQueue Plugin
+  easyqueue.easyqueue:
+    description: Grants access to the /easyqueue command - Lists current players in queue
+  easyqueue.easylist:
+    description: Grants access to the /easylist command - Lists all players in the prioritizedPlayers.yml file
+  simplequeue.easyadd:
+    description: Grants access to the /easyadd command - Adds a player to the prioritizedPlayers.yml file
+  simplequeue.easyremove:
+    description: Grants access to the /easyremove command - Removes a player from the prioritizedPlayers.yml file

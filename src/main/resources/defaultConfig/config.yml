@@ -1,0 +1,10 @@
+reservedSlots: 10 #Slots for prioritizedPlayers.
+allowPrioritizedPlayersViaConfig: true
+mustReconnectWithinSec: 180 #Seconds to reconnect to keep your position.
+kickMessageQueued: |2-
+
+  &aThe server is currently full!&r
+
+  You are in the queue.
+  Position &a%d/%d&r.
+  &7Please reconnect within the next &6%d sec&7 to keep your position.&r
