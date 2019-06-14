@@ -10,7 +10,7 @@
 
 
     <name>EasyQueue</name>
-    <url></url>
+    <url>https://github.com/KeilaPallo/easyqueue</url>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
