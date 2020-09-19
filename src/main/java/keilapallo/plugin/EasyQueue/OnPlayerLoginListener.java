@@ -40,7 +40,7 @@ class OnPlayerLoginListener implements Listener {
         Player player = e.getPlayer();
 
         if(e.getResult() != PlayerLoginEvent.Result.ALLOWED && e.getResult() != PlayerLoginEvent.Result.KICK_FULL) {
-            logger.warning("[EasyQueue]: A player logged in but had an unexpected login result. Please report this if you this is an error.");
+            logger.warning("A player logged in but had an unexpected login result. Please report this if you this is an error.");
             playerQueue.removePlayer(player);
             return;
         }

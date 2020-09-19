@@ -25,7 +25,7 @@ public class CommandSqRemove implements CommandExecutor {
             return false;
 
         if(!configYaml.getBoolean("allowPrioritizedPlayersViaConfig")) {
-            sender.sendMessage("[EasyQueue]: Please enable 'allowPrioritizedPlayersViaConfig' in the config.yml");
+            sender.sendMessage("Please enable 'allowPrioritizedPlayersViaConfig' in the config.yml");
             return true;
         }
 
@@ -37,7 +37,7 @@ public class CommandSqRemove implements CommandExecutor {
 
         prioritizedPlayerConfigHandler.removePlayer(foundPlayer);
 
-        sender.sendMessage(String.format("[EasyQueue]: %s was successfully removed from the prioritizedPlayers.yml.", foundPlayer.getPlayer()));
+        sender.sendMessage(String.format("%s was successfully removed from the prioritizedPlayers.yml.", foundPlayer.getPlayer()));
 
         return true;
     }

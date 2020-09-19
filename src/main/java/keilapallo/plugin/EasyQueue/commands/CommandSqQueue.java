@@ -30,9 +30,9 @@ public class CommandSqQueue implements CommandExecutor {
         int index = 0;
 
         if(listSize == 1)
-            sb.append(String.format("[EasyQueue]: There is currently 1 player in the queue: "));
+            sb.append(String.format("There is currently 1 player in the queue: "));
         else
-            sb.append(String.format("[EasyQueue]: There are currently %d players in the queue:\n", listSize));
+            sb.append(String.format("There are currently %d players in the queue:\n", listSize));
 
         for(UUID playerUUID : uuidList) {
             sb.append(server.getOfflinePlayer(playerUUID).getName());

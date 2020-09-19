@@ -20,7 +20,7 @@ public class CommandSqVersion implements CommandExecutor {
         if(!command.getLabel().equals("easyversion") || !SimpleQueuePermission.COMMAND_SQVERSION.hasPermission(sender))
             return false;
 
-        sender.sendMessage(String.format("[EasyQueue]: You are running %s version %s", pdf.getName(), pdf.getVersion()));
+        sender.sendMessage(String.format("You are running %s version %s", pdf.getName(), pdf.getVersion()));
 
 
         return true;

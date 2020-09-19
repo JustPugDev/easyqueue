@@ -26,7 +26,7 @@ public class CommandSqList implements CommandExecutor {
             return false;
 
         if(!configYaml.getBoolean("allowPrioritizedPlayersViaConfig")) {
-            sender.sendMessage("[EasyQueue]: Please enable 'allowPrioritizedPlayersViaConfig' in the config.yml");
+            sender.sendMessage("Please enable 'allowPrioritizedPlayersViaConfig' in the config.yml");
             return true;
         }
 
@@ -35,7 +35,7 @@ public class CommandSqList implements CommandExecutor {
         int listSize = prioritizedPlayerList.size();
         int index = 0;
 
-        sb.append(String.format("[EasyQueue]: There are %d in the prioritizedPlayers.yml:\n", listSize));
+        sb.append(String.format("There are %d in the prioritizedPlayers.yml:\n", listSize));
 
         for(OfflinePlayer player : prioritizedPlayerList) {
             sb.append(player.getName());
